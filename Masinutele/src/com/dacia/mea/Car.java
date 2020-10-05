@@ -7,13 +7,44 @@ public class Car {
 	private String modelul;
 	private boolean isSpinning;
 
-	public  CarType getType() {
+	public CarType getType() {
 		return tipulMasinei;
 	}
-	
-	
+
+	public void setType(CarType y) {
+		this.tipulMasinei = y;
+	}
+
+	public int getNumarGeamuri() {
+		System.out.println("are   " + numarGeamuri + "    ....");
+
+		return numarGeamuri;
+	}
+
+	public void setNumarGeamuri(int a) {
+		this.numarGeamuri = a;
+	}
+
+	public String getModelul() {
+		System.out.println("modelul este " + modelul);
+		return this.modelul;
+	}
+
+	public void setModelul(String model) {
+		this.modelul = model;
+
+	}
+
+	public boolean getIsSpinning() {
+		return isSpinning;
+	}
+
+	public void setIsSpinning(boolean invarte) {
+		this.isSpinning = invarte;
+	}
+
 	public Car() {
-		this.tipulMasinei=CarType.MANUAL;
+		this.tipulMasinei = CarType.MANUAL;
 	}
 
 	public Car(boolean isSpinning, int numarGeamuri, String modelul) {
