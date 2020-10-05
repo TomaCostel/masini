@@ -2,44 +2,49 @@ package com.dacia.mea;
 
 public class Car {
 
-	CarType tipulMasinei;
-	int numarGeamuri;
-	String modelul;
-	boolean isSpinning;
+	private CarType tipulMasinei;
+	private int numarGeamuri;
+	private String modelul;
+	private boolean isSpinning;
 
-	Car() {
+	public  CarType getType() {
+		return tipulMasinei;
+	}
+	
+	
+	public Car() {
 		this.tipulMasinei=CarType.MANUAL;
 	}
 
-	Car(boolean isSpinning, int numarGeamuri, String modelul) {
+	public Car(boolean isSpinning, int numarGeamuri, String modelul) {
 		this.isSpinning = isSpinning;
 		this.numarGeamuri = numarGeamuri;
 		this.modelul = modelul;
 	}
 
-	Car(boolean isSpinning, int numarGeamuri) {
+	public Car(boolean isSpinning, int numarGeamuri) {
 		this.isSpinning = isSpinning;
 		this.numarGeamuri = numarGeamuri;
 	}
 
-	Car(String modelul) {
+	public Car(String modelul) {
 		System.out.println("Modelul este" + this.modelul);
 	}
 
-	Car(int numarGeamuri, String modelul, boolean isSpinning) {
+	public Car(int numarGeamuri, String modelul, boolean isSpinning) {
 		this(isSpinning, numarGeamuri);
 		this.numarGeamuri = numarGeamuri;
 		this.modelul = modelul;
 
 	}
 
-	void afiseazaDetalii() {
+	public void afiseazaDetalii() {
 		System.out.println("Numar geamuri  " + this.numarGeamuri);
 		System.out.println("Numele modelului  " + this.modelul);
 		System.out.println("Se tureaza     (asta este cel predefinit)   " + this.isSpinning);
 	}
 
-	void masinaSeMisca(boolean isSpinning) {
+	public void masinaSeMisca(boolean isSpinning) {
 		if (isSpinning = true) {
 			System.out.println("Masina se misca");
 		} else {
@@ -47,7 +52,7 @@ public class Car {
 		}
 	}
 
-	void numeleMarcii() {
+	public void numeleMarcii() {
 		this.modelul = "Audi";
 	}
 
