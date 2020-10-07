@@ -1,20 +1,26 @@
 package com.dacia.mea;
 
+import static com.dacia.mea.Car.NUMBER_OF_CHAIR;
+
 public class mainul {
 
 	static void comparareSpiner(Car mas1, Car mas2) {
-		if (mas1.isSpinning = true) {
+		if (mas1.getIsSpinning() == true) {
 			mas1.afiseazaDetalii();
-		} else if (mas2.isSpinning = true) {
+		} else if (mas2.getIsSpinning() == true) {
 			mas2.afiseazaDetalii();
 		}
+	}
+
+	static void isFaster(Car car1, Car car2) {
+		if (car1.getMaxSpeed() > car2.getMaxSpeed())
+			System.out.println();
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Car autovehicul = new Car();// aici mi-a dat eroare prima data pentru ca nu am specificat ce tip de
-									// variabila este in paranteza si in car.java nu aveam constructor asa..
+		Car autovehicul = new Car();
 
 		Car masina = new Car(6, "nissan", false);
 		Car masina3 = new Car(false, 4);
@@ -26,10 +32,18 @@ public class mainul {
 		masina.masinaSeMisca(false);
 		masina.afiseazaDetalii();
 		masina3.numeleMarcii();
-		
-		masina4.afiseazaDetalii();
-		
-		comparareSpiner(autovehicul,masina3);
+
+		Car masina5 = new Car(false, 4, "Logan");
+		Car masina6 = new Car(true, 5, "Maibach");
+		Car masina7 = new Car();
+		masina7.setIsSpinning(true);
+		masina5.setMaxSpeed(200);
+		masina6.setMaxSpeed(120);
+		System.out.println(masina5.getNumberOfDoors());
+		comparareSpiner(autovehicul, masina3);
+		System.out.println(NUMBER_OF_CHAIR);
+		// System.out.println(numberOfDoors);
+
 	}
 
 }

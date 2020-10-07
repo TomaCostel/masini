@@ -6,6 +6,28 @@ public class Car {
 	private int numarGeamuri;
 	private String modelul;
 	private boolean isSpinning;
+	private final int numberOfDoors = 2;// la asta m am gandit sa il pun intr-un constructor al clasei..poate merge :D
+	// sa il pot afisa in main
+	final static int NUMBER_OF_CHAIR = 5;
+	private int maxSpeed;
+	
+	static void isFaster(Car car1, Car car2) {
+		if (car1.getMaxSpeed() > car2.getMaxSpeed())
+			System.out.println();
+	}
+
+	public int getNumberOfDoors() {
+		return numberOfDoors;
+	}
+
+	public int getMaxSpeed() {
+		System.out.println("Viteza maxima este=" + maxSpeed);
+		return this.maxSpeed;
+	}
+
+	public void setMaxSpeed(int viteza) {
+		this.maxSpeed = viteza;
+	}
 
 	public CarType getType() {
 		return tipulMasinei;
@@ -85,6 +107,7 @@ public class Car {
 
 	public void numeleMarcii() {
 		this.modelul = "Audi";
+
 	}
 
 }
