@@ -1,4 +1,4 @@
-package com.dacia.mea;
+package enums;
 
 public enum CarType {
 

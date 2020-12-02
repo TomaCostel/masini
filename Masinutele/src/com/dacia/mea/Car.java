@@ -1,6 +1,8 @@
 package com.dacia.mea;
 
-public class Car {
+import enums.CarType;
+
+public class Car extends LandVehicle {
 
 	private CarType tipulMasinei;
 	private int numarGeamuri;
