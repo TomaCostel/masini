@@ -30,6 +30,7 @@ public class mainul {
 		masina9.setName("Suzuki");
 		listaB.add(barca);
 		listaM.add(masina9);
+		
 		Util.findMaxSpeedVehicle(listaB, listaM);
 /*
 		Car autovehicul = new Car();
