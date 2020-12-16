@@ -9,7 +9,7 @@ public abstract class Vehicle {
 	private int maxSpeed;
 
 	abstract void isMoving();
-
+	
 	public int getMaxSpeed() {
 		return maxSpeed;
 	}

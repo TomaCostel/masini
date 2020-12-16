@@ -42,7 +42,7 @@ public class Util {
 
 	}
 
-	public static Vehicle findMaxSpeedVehicle(ArrayList<Boat> listaBarci, ArrayList<Car> listaMasini) {
+	public static Vehicle findMaxSpeedVehicle(ArrayList<Boat> listaBarci, ArrayList<Car> listaMasini) throws Exception {
 		ArrayList<Vehicle> listaVehicule = new ArrayList<Vehicle>();
 		listaVehicule.addAll(listaBarci);
 		listaVehicule.addAll(listaMasini);
@@ -70,11 +70,13 @@ public class Util {
 					System.out.println(masina.getName());
 				}
 			}
+		} else if (a == 3) {
+			throw new Exception("Exista 3 vehicule cu aceeasi viteza ");
 		}
 		return null;
 	}
 
-	public static Vehicle cautaVitezaMaxima(ArrayList<Boat> listaBarci, ArrayList<Car> listaMasini) throws Exception {
+	public static void cautaVitezaMaxima(ArrayList<Boat> listaBarci, ArrayList<Car> listaMasini) throws Exception {
 		ArrayList<Vehicle> listaMasini2 = new ArrayList<Vehicle>();
 		listaMasini2.addAll(listaBarci);
 		listaMasini2.addAll(listaMasini);
@@ -102,38 +104,32 @@ public class Util {
 					System.out.println(masina.getName());
 				}
 			}
+		} else if (a == 3) {
+			throw new Exception("Exista 3 vehicule cu aceeasi viteza ");
 		}
-		else if (a==3) {
-		throw new Exception("Exista 3 vehicule cu aceeasi viteza ");	
-		}
-		return null;
+
 	}
 
 	public static void afisareCaracteristiciObiect(ArrayList<Vehicle> listaMasini) {
 		System.out.println("Care este numaru obiectului din lista caruia doresti sa ii vezi caracteristicile ");
 		Scanner a = new Scanner(System.in);
-		String b = a.next();
-		ArrayList<Vehicle> listaMasini3=new ArrayList<Vehicle>();
-		int max = 0;
-		int count = 1;
-		for (Vehicle masina : listaMasini) {
-			if (max < masina.getMaxSpeed()) {
-				// masina cu max nou mai mare
-				max = masina.getMaxSpeed();
-				count = 1;
+		int b = a.nextInt();
+		Vehicle masina4 = new Car();
+		try {
+			masina4 = listaMasini.get(b);
 
-			} else {
-				if (max == masina.getMaxSpeed()) {
-					count++;
-				}
-			}
-
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Indexul introdus nu exista");
+			System.out.println("Avem atatea elemente >>>>>>" + listaMasini.size());
+		} catch (Exception r) {
+			r.printStackTrace();
+			System.out.println("A aparut o exceptie neprevazuta");
 		}
-		int masina3 = Util.getNumberOfCarsWithMaxSpeed(listaMasini3);
-		if (b.equals(masina3)) {
-			
-		} else
-			System.out.println("NU EXISTA");
-		    System.out.println(count);
+		if (masina4 != null) {
+
+			System.out.println(masina4.getColor());
+			System.out.println(masina4.getMaxSpeed());
+			System.out.println(masina4.getName());
+		}
 	}
 }
