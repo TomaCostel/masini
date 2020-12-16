@@ -2,6 +2,8 @@ package com.dacia.mea;
 
 import static com.dacia.mea.Car.NUMBER_OF_CHAIR;
 
+import java.util.ArrayList;
+
 public class mainul {
 
 	static void comparareSpiner(Car mas1, Car mas2) {
@@ -18,8 +20,18 @@ public class mainul {
 	}
 
 	public static void main(String[] args) {
-	
-
+		ArrayList<Boat> listaB = new ArrayList<Boat>();
+		ArrayList<Car> listaM = new ArrayList<Car>();
+		Car masina9 = new Car(6, "nissan", false);
+		Boat barca = new Boat();
+		barca.setMaxSpeed(90);
+		masina9.setMaxSpeed(90);
+		barca.setName("Sakura");
+		masina9.setName("Suzuki");
+		listaB.add(barca);
+		listaM.add(masina9);
+		Util.findMaxSpeedVehicle(listaB, listaM);
+/*
 		Car autovehicul = new Car();
 
 		Car masina = new Car(6, "nissan", false);
@@ -43,7 +55,7 @@ public class mainul {
 		comparareSpiner(autovehicul, masina3);
 		System.out.println(NUMBER_OF_CHAIR);
 		// System.out.println(numberOfDoors);
-
+*/
 	}
 
 }

@@ -23,7 +23,6 @@ public class Car extends LandVehicle {
 	}
 
 	public int getMaxSpeed() {
-		System.out.println("Viteza maxima este=" + maxSpeed);
 		return this.maxSpeed;
 	}
 
