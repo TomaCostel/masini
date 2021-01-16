@@ -23,36 +23,32 @@ public class mainul {
 		ArrayList<Boat> listaB = new ArrayList<Boat>();
 		ArrayList<Car> listaM = new ArrayList<Car>();
 		ArrayList<Vehicle> listaV = new ArrayList<Vehicle>();
-
 		Car masina9 = new Car(6, "nissan", false);
-		Boat barca = new Boat();
 		Car masina10 = new Car(8, "mazda", true);
-		Boat barca2 = new Boat();
-		barca.setMaxSpeed(90);
-		masina9.setMaxSpeed(90);
-		barca2.setMaxSpeed(90);
-		masina10.setMaxSpeed(89);
-		barca.setName("Sakura");
-		masina9.setName("Suzuki");
-		listaB.add(barca);
+		Car masina11 = new Car(9, "turq", false);
+		
+
 		listaM.add(masina9);
-		listaB.add(barca2);
 		listaM.add(masina10);
+		listaM.add(masina11);
+		ExceptionExcercises.ecercitii(listaM);
 
-		listaV.add(barca2);
-		listaV.add(masina10);
-		listaV.add(barca);
-		listaV.add(masina9);
-
-		try {
-			Util.findMaxSpeedVehicle(listaB, listaM);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("**************************************");
-		Util.afisareCaracteristiciObiect(listaV);
-	
+		/*
+		 * Car masina9 = new Car(6, "nissan", false); Boat barca = new Boat(); Car
+		 * masina10 = new Car(8, "mazda", true); Boat barca2 = new Boat();
+		 * barca.setMaxSpeed(90); masina9.setMaxSpeed(90); barca2.setMaxSpeed(90);
+		 * masina10.setMaxSpeed(89); barca.setName("Sakura"); masina9.setName("Suzuki");
+		 * listaB.add(barca); listaM.add(masina9); listaB.add(barca2);
+		 * listaM.add(masina10);
+		 * 
+		 * listaV.add(barca2); listaV.add(masina10); listaV.add(barca);
+		 * listaV.add(masina9);
+		 * 
+		 * try { Util.findMaxSpeedVehicle(listaB, listaM); } catch (Exception e) { //
+		 * TODO Auto-generated catch block e.printStackTrace(); }
+		 * System.out.println("**************************************");
+		 * Util.afisareCaracteristiciObiect(listaV);
+		 */
 		System.out.println("**************************************");
 		/*
 		 * Car autovehicul = new Car();

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Util {
 
-	public static Vehicle showBiggestSpeed(ArrayList<Vehicle> listaMasini) {
+	public static Vehicle showBiggestSpeed(ArrayList<Vehicle> listaMasini)throws ArrayIndexOutOfBoundsException {
 		int max = 0;
 
 		Vehicle maxVehicle = listaMasini.get(0);
@@ -132,4 +132,7 @@ public class Util {
 			System.out.println(masina4.getName());
 		}
 	}
+	
+	
+	
 }
